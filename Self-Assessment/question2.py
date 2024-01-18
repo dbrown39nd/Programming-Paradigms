@@ -9,12 +9,12 @@ def dfs_traversal(graph, initial_node):
     queue.append(initial_node)
     while queue:
         node = queue.pop(0)
-        if node not in visited:
+        if node not in visited: #could be optimized
             visited.append(node)
         for index, val in enumerate(graph[node]): #Insert at the front of the queue, not the back. 
             if val not in visited:
                 queue.insert(index, val)    
-    return visited
+    return visited 
         
         
 def main():
